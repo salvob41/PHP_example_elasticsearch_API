@@ -9,11 +9,9 @@
 require dirname(__DIR__) . "/vendor/autoload.php";;
 use Elasticsearch\ClientBuilder;
 
-echo dirname(__DIR__) . "/include/conf.ini";
+
 //get configuration from file
 $config = parse_ini_file(dirname(__DIR__) . "/include/conf.ini");
-
-var_dump($config);
 
 $hosts = [
     [
