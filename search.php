@@ -35,5 +35,5 @@ while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0)
             "scroll" => "30s"           // and the same timeout window
         ]
     );
-    print_r(json_encode ($response,JSON_PRETTY_PRINT),encoding);
+    print_r(json_encode ($response,JSON_PRETTY_PRINT));
 }
