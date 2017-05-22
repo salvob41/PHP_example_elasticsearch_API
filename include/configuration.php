@@ -24,7 +24,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 $logger = new Logger('name');
-$logger->pushHandler(new StreamHandler(dirname(__DIR__) . 'log/elastic.log', Logger::INFO));
+$logger->pushHandler(new StreamHandler(dirname(__DIR__) . '/log/elastic.log', Logger::INFO));
 $client = ClientBuilder::create()
     ->setLogger($logger)
     ->setHosts($hosts)

@@ -1,5 +1,6 @@
 [elasticsearch_connection]
-host = "localhost" #if the elasticsearch server run on default localhost:9200, this is all you need
+;if the elasticsearch server run on default localhost:9200, this is all you need
+host = "localhost"
 
 [index]
 index = "index_name"
