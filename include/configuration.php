@@ -6,6 +6,7 @@
  * Time: 15:01
  */
 
+header('Content-type: text/plain; charset=utf-8');
 require dirname(__DIR__) . "/vendor/autoload.php";;
 use Elasticsearch\ClientBuilder;
 
