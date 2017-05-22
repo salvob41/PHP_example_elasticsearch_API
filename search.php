@@ -17,7 +17,7 @@ $params = [
 // The response will contain the first batch of documents
 // and a scroll_id
 $response = $client->search($params);
-
+$complete_response = [];
 // Now we loop until the scroll "cursors" are exhausted
 while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0) {
 
@@ -35,5 +35,7 @@ while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0)
             "scroll" => "30s"           // and the same timeout window
         ]
     );
-    print_r(json_encode ($response,JSON_PRETTY_PRINT));
+    $complete_response[] = $response;
+
 }
+print_r(json_encode ($complete_response,JSON_PRETTY_PRINT));
