@@ -1,0 +1,6 @@
+[elasticsearch_connection]
+host = "localhost" #if the elasticsearch server run on default localhost:9200, this is all you need
+
+[index]
+index = "index_name"
+type = "type_name"
