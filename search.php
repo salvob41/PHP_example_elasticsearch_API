@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
 require_once __DIR__ . "/include/configuration.php";
 
 $params = [
@@ -37,5 +38,5 @@ while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0)
     echo '<pre>';
     print_r($response);
     echo '</pre>';
-    //print_r(json_encode ($response,JSON_PRETTY_PRINT));
+    print_r(json_encode ($response,JSON_PRETTY_PRINT));
 }
