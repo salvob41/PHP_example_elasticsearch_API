@@ -31,7 +31,7 @@ while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0)
     // You must always refresh your _scroll_id!  It can change sometimes
     $scroll_id = $response['_scroll_id'];
 
-    $complete_response[] = $response['hits']['hits'];
+    $complete_response = array_merge($complete_response, $response['hits']['hits']);
 
     // Execute a Scroll request and repeat
     $response = $client->scroll([
@@ -42,4 +42,4 @@ while (isset($response['hits']['hits']) && count($response['hits']['hits']) > 0)
 
 
 }
-print_r(json_encode ($complete_response,JSON_PRETTY_PRINT));
+print_r(json_encode($complete_response, JSON_PRETTY_PRINT));
